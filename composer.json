@@ -1,0 +1,15 @@
+{
+    "name": "dj/rmt-demo",
+    "authors": [
+        {
+            "name": "Jeanmonod David",
+            "email": "david.jeanmonod@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "liip/rmt": "0.9.*"
+    }
+}
