@@ -1,1 +1,27 @@
-{"vcs":"git","version-generator":"semantic","version-persister":"vcs-tag"}
+{
+    "vcs": "git",
+    "prerequisites": [
+        "working-copy-check",
+        "display-last-changes"
+    ],
+    "version-generator": "simple",
+    "version-persister": {
+        "name": "vcs-tag",
+        "tag-prefix": "{branch-name}_"
+    },
+    "branch-specific": {
+        "master": {
+            "version-generator": "semantic",
+            "version-persister": "vcs-tag",
+            "pre-release-actions": [
+                "UpdateCSSInclusion.php",
+                {
+                    "name":"changelog-update",
+                    "format":"semantic",
+                    "dump-commits": true
+                },
+                "vcs-commit"
+            ]
+        }
+    }
+}
